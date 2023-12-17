@@ -70,7 +70,7 @@ function draw(e) {
     // attributes of the line
     ctx.lineWidth = 40;
     ctx.lineCap = 'round';
-    ctx.strokeStyle = 'red';
+    ctx.strokeStyle = 'pink';
 
     // get current position, move to new position, create line from current to new
     ctx.moveTo(pos.x, pos.y);
@@ -125,7 +125,7 @@ async function predictModel(){
   y = model.predict(image);
   
   // replaces the text in the result tag by the model prediction
-  document.getElementById('result').innerHTML = "Prediction: " + y.argMax(1).dataSync();
+  document.getElementById('result').innerHTML = "Результат: " + y.argMax(1).dataSync();
 }
 
 // loads the model

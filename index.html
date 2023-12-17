@@ -1,7 +1,7 @@
-<html>
+<html lang="ru">
   
   <head>
-    
+    <meta charset="utf-8">
     <!-- Imports TensorFlow.js -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.7.0"> </script>
 
@@ -13,22 +13,22 @@
   <body>
     
     <!-- Defines the container with the predictand erase buttons, and the canvas to draw a digit -->
-    <div id="container">
-      
-      <h1>Draw a number</h1>
-      <p id="result">Prediction </p>
-      
+    <div id="container" style="margin: 10px auto; display: flex; flex-direction: column; justify-content: center; align-items: center">
+      <h1>Сервис по распознаванию нарисованных цифр</h1>
+      <h2>Нарисуйте цифру</h2>
+
       <div>
         <!-- This button tells the model to return a prediction for the current canvas -->
-        <button type="button" class="btn btn-primary btn-block" onclick="predictModel()">Predict</button>
-        
+        <button type="button" class="btn btn-primary btn-block" style="background-color: pink; border: 0; padding: 10px; border-radius: 10px" onclick="predictModel()">Выполнить</button>
+
         <!-- This button clears the canvas so that we can draw a new digit -->
-        <button type="button" class="btn btn-secondary btn-block" onclick="erase()">Clear</button>
+        <button type="button" class="btn btn-secondary btn-block" style="background-color: pink; border: none; padding: 10px; border-radius: 10px" onclick="erase()">Очистить</button>
       </div>
-      
-      <!-- This defines the canvas on which we can draw a digit. 
+
+      <!-- This defines the canvas on which we can draw a digit.
            If the canvas is too small increase the width and height -->
-      <canvas id="canvas" width="386px" height="386px" class="canvas" style="border:1px solid #b9bfc9;margin-top:25px;"></canvas>
+      <canvas id="canvas" width="350px" height="350px" class="canvas" style="border:2px solid pink;margin-top:25px; max-width: 350px; max-height: 350px"></canvas>
+      <h3 id="result">Результат: </h3>
     </div>
 
     <!-- Imports the main script file -->
